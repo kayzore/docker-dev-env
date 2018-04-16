@@ -12,6 +12,7 @@ services:
       - "traefik.frontend.rule=Host:portainer.localhost"
       - "traefik.port=9000"
     restart: always
+    privileged: true
     depends_on:
       - traefik
     networks:
